@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+    <!-- load index.js -->
+    <script src="index.js"></script>
+</head>
+<nav>
+    <ul>
+        <li><a href="#fonts">Fonts</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#backgrounds">Backgrounds</a></li>
+        <li><a href="#borders">Borders</a></li>
+        <li><a href="#button">Buttons</a></li>
+    </ul>
+</nav>
+<body>
+    <h1 id="title">Personal Design System</h1>
+    <h2 id="subtitle">A collection of styles and components for your website</h2>
+    <section>
+        <div id="fonts">
+            <h2 id="category-title">Fonts</h1>
+            <div class="fontbox">
+                <p class="font-label source-code-pro">
+                    Source Code Pro
+                </p>
+                <p class="regular source-code-pro">The quick brown fox jumps over the lazy dog</p>
+                <p class="bold source-code-pro">The quick brown fox jumps over the lazy dog</p>
+                <p class="italic source-code-pro">The quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div class="fontbox">
+                <p class="font-label nunito-sans">
+                    Nunito Sans
+                </p>
+                <p class="regular nunito-sans">The quick brown fox jumps over the lazy dog</p>
+                <p class="bold nunito-sans">The quick brown fox jumps over the lazy dog</p>
+                <p class="italic nunito-sans">The quick brown fox jumps over the lazy dog</p>
+            </div>
+            <div class="fontbox">
+                <p class="font-label poppins">
+                    Poppins
+                </p>
+                <p class="regular poppins">The quick brown fox jumps over the lazy dog</p>
+                <p class="bold poppins">The quick brown fox jumps over the lazy dog</p>
+                <p class="italic poppins">The quick brown fox jumps over the lazy dog</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="colors-schemes">
+            <h2 id="category-title">
+                Color Schemes
+            </h2>
+            <br>
+            <h2 id="color-label">
+                Please Select The Type of Color Scheme
+            </h2>
+            <!-- create a form with select buttons -->
+            <select id="color-select" onchange="schemeToggle(this)">
+                <option value="">Select</option>
+                <option value="colorful-balanced">Colorful and Balanced</option>
+                <option value="bright-accent">Bright Accent</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+            </select>
+        </div>
+        <br>
+
+        <div id="schemes">
+            <div id="colorful-balanced" style="display:none;">
+                <h3 id="color-title">
+                    Colorful Balanced
+                </h2>
+                <div class="color-box primary">
+                    <p id="color-label">
+                        #453d3
+                    </p>
+                </div>
+                <div class="color-box secondary">
+                    <p id="color-label">
+                        #85dcba
+                    </p>
+                </div>
+                <div class="color-box third">
+                    <p id="color-label">
+                        #e8a87c
+                    </p>
+                </div>
+                <div class="color-box fourth">
+                    <p id="color-label">
+                        #c38d9e
+                    </p>
+                </div>
+                <div class="color-box fifth">
+                    <p id="color-label">
+                        #41b3a3
+                    </p>
+                </div>
+            </div>
+            <div id="bright-accent" style="display:none;">
+                <h3 id="color-title">
+                    Bright Accent
+                </h2>
+                <div class="color-box primary">
+                    <p id="color-label">
+                        #242582
+                    </p>
+                </div>
+                <div class="color-box secondary">
+                    <p id="color-label">
+                        #553D67
+                    </p>
+                </div>
+                <div class="color-box third">
+                    <p id="color-label">
+                        #F64C72
+                    </p>
+                </div>
+                <div class="color-box fourth">
+                    <p id="color-label">
+                        #99738E
+                    </p>
+                </div>
+                <div class="color-box fifth">
+                    <p id="color-label">
+                        #2F2FA2
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
