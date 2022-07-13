@@ -10,21 +10,34 @@
     <!-- load index.js -->
     <script src="index.js"></script>
 </head>
-<nav>
-    <ul>
-        <li><a href="#fonts">Fonts</a></li>
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#backgrounds">Backgrounds</a></li>
-        <li><a href="#borders">Borders</a></li>
-        <li><a href="#button">Buttons</a></li>
-    </ul>
-</nav>
+<header>
+    <div class="container">
+        <h1 class="logo"></h1>
+        <nav>
+            <ul>
+                <li><a href="#fonts">Fonts</a></li>
+                <li><a href="#schemes">Colors</a></li>
+                <li><a href="#backgrounds">Backgrounds</a></li>
+                <li><a href="#borders">Borders</a></li>
+                <li><a href="#button">Buttons</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 <body>
+
     <h1 id="title">Personal Design System</h1>
     <h2 id="subtitle">A collection of styles and components for your website</h2>
     <section>
         <div id="fonts">
-            <h2 id="category-title">Fonts</h1>
+            <h2 id="category-title">Fonts</h2>
+            <p>
+                Typography is an important part of a website. It is the way the content is displayed, and the way the user interacts with it.
+                The fonts used in this system are all Google fonts, and are all available in the Google Fonts library.
+                Remember to allways have font fallbacks if the font you are using is not available in their browser.
+            </p>
+            
             <div class="fontbox">
                 <p class="font-label source-code-pro">
                     Source Code Pro
@@ -51,22 +64,22 @@
             </div>
         </div>
     </section>
-    <section>
+    <sectioni id="colors">
         <div id="colors-schemes">
             <h2 id="category-title">
                 Color Schemes
             </h2>
             <br>
             <h2 id="color-label">
-                Please Select The Type of Color Scheme
+                Please Select The Type of Color Scheme You Want
             </h2>
             <!-- create a form with select buttons -->
             <select id="color-select" onchange="schemeToggle(this)">
-                <option value="">Select</option>
+                <option value="clear">Select</option>
                 <option value="colorful-balanced">Colorful and Balanced</option>
                 <option value="bright-accent">Bright Accent</option>
-                <option value="green">Green</option>
-                <option value="yellow">Yellow</option>
+                <option value="audacious-and-vibrant">Audacious and Vibrant</option>
+                <option value="cool-and-fresh">Cool and Fresh</option>
             </select>
         </div>
         <br>
@@ -101,11 +114,19 @@
                         #41b3a3
                     </p>
                 </div>
+                <div class="show-example">
+                    <button class="button-37" id="colorful-balanced-btn" onclick="showExampleImage('colorful-balanced'); console.log('test')" role="button">
+                        Show Example
+                    </button>
+                </div>
+            </div>
+            <div id="colorful-balanced-img" class="example-img" style="display: none;">
+                <img src="images/colorful-and-balanced.jpg" class="example-image" alt="colorful-balanced">
             </div>
             <div id="bright-accent" style="display:none;">
                 <h3 id="color-title">
                     Bright Accent
-                </h2>
+                </h3>
                 <div class="color-box primary">
                     <p id="color-label">
                         #242582
@@ -131,8 +152,131 @@
                         #2F2FA2
                     </p>
                 </div>
+                <div class="show-example">
+                    <button class="button-37" id="bright-accent-btn" onclick="showExampleImage('bright-accent')" role="button">
+                        Show Example
+                    </button>
+                </div>
             </div>
+            <div id="bright-accent-img" class="example-img" style="display: none;">
+                <img src="images/bright-accent-colors.jpg" class="example-image" alt="bright-accent">
+            </div>
+            <div id="cool-and-fresh" style="display:none;">
+                <h2 id="color-title">
+                    Cool and Fresh
+                </h2>
+                <div class="color-box primary">
+                    <p id="color-label">
+                        #05386B
+                    </p>
+                </div>
+                <div class="color-box secondary">
+                    <p id="color-label">
+                        #379683
+                    </p>
+                </div>
+                <div class="color-box third">
+                    <p id="color-label">
+                        #5CDB95
+                    </p>
+                </div>
+                <div class="color-box fourth">
+                    <p id="color-label">
+                        #8EE4AF
+                    </p>
+                </div>
+                <div class="color-box fifth">
+                    <p id="color-label">
+                        #EDF5E1
+                    </p>
+                </div>
+                <div class="show-example">
+                    <button class="button-37" id="cool-and-fresh-btn" onclick="showExampleImage('cool-and-fresh')" role="button">
+                        Show Example
+                    </button>
+                </div>
+            </div>
+            <div id="cool-and-fresh-img" class="example-img" style="display: none;">
+                <img src="images/cool-and-fresh.jpg" class="example-image" alt="bright-accent">
+            </div>
+            <div id="audacious-and-vibrant" style="display:none;">
+                <h2 id="color-title">
+                    Audacious and Vibrant
+                </h2>
+                <div class="color-box primary">
+                    <p id="color-label">
+                        #FC4445
+                    </p>
+                </div>
+                <div class="color-box secondary">
+                    <p id="color-label">
+                        #3FEEE6
+                    </p>
+                </div>
+                <div class="color-box third">
+                    <p id="color-label">
+                        #55BCC9
+                    </p>
+                </div>
+                <div class="color-box fourth">
+                    <p id="color-label">
+                        #97CAEF
+                    </p>
+                </div>
+                <div class="color-box fifth">
+                    <p id="color-label">
+                        #CAFAFE
+                    </p>
+                </div>
+                <div class="show-example">
+                    <button class="button-37" id="audacious-and-vibrant-btn" onclick="showExampleImage('audacious-and-vibrant')" role="button">
+                        Show Example
+                    </button>
+                </div>
         </div>
+        <div id="audacious-and-vibrant-img" class="example-img" style="display: none;">
+            <img src="images/audacious-and-vibrant.jpg" class="example-image" alt="audacious-and-vibrant">
+        </div>
+    </section>
+    <section id="Borders">
+        <div id="borders">
+            <h2 id="category-title">Borders</h2>
+            <p>
+                <!-- explain borders -->
+                Borders is a way to add a border to a piece of text or component. The border can be a solid color or a gradient. 
+                Borders can also be used to draw attention to a piece of text or component. There are a lot of different borders and we will show you how to use them
+                and level up your border skills
+            </p>
+            <div id="border-examples">
+                <div class="border-example solid">
+                    <p class="label">
+                        This is a solid border
+                    </p>
+
+                </div>
+                <!-- make the div with a class of border-example open the modal -->
+                <div class="border-example dotted">
+                    <p class="label">
+                        This is a dotted border
+                    </p>
+                </div>
+                <div class="border-example dashed">
+                    <p class="label">
+                        This is a dashed border
+                    </p>
+                </div>
+                <div class="border-example gradient">
+                    <p class="label">
+                        This is a gradient border
+                    </p>
+                </div>
+                <div class="border-example rounded">
+                    <p class="label">
+                        This is a rounded border
+                    </p>
+                </div>
+            </div> 
+        </div>  
     </section>
 </body>
 </html>
