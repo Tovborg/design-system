@@ -109,4 +109,22 @@ function showExampleImage(scheme) {
 }
 
 
-// Event listeners
+// modal JS
+function openModal(el) {
+    if (el === 'solid') {
+        var headline = document.getElementById('modal-headline')
+        headline.innerHTML = 'Solid Border';
+        var paragraph = document.getElementById('modal-paragraph')
+        paragraph.innerHTML = 'A solid border is a border that is solid, not dashed or dotted. Solid borders are used for borders around elements, like the border around a box, or the border around a table cell. The solid border is made using either the shorthand border property or the border-style property. <br><br><code>border: solid 1px black;</code>';
+    }
+    // add a class 'open' to the .modal-wrapper
+    $('.modal-wrapper').toggleClass('open');
+    // add a class 'blur-it' to the .page-wrapper
+    $('.page-wrapper').toggleClass('blur-it');
+}
+function closeModal() {
+    // remove the class 'open' from the .modal-wrapper
+    $('.modal-wrapper').toggleClass('open');
+    // remove the class 'blur-it' from the .page-wrapper
+    $('.page-wrapper').toggleClass('blur-it');
+}

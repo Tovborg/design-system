@@ -7,6 +7,8 @@
     <meta name="description" content="">
     <link href="style.css" rel="stylesheet">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- load index.js -->
     <script src="index.js"></script>
 </head>
@@ -26,9 +28,57 @@
 </header>
 
 <body>
-
-    <h1 id="title">Personal Design System</h1>
-    <h2 id="subtitle">A collection of styles and components for your website</h2>
+  <!-- Modal -->
+    <div class="modal-wrapper">
+        <div class="modal">
+            <div class="head">
+                <a class="btn-close trigger" href="#" onclick="closeModal()">
+                <i class="fa fa-times" aria-hidden="false"></i>
+                </a>
+            </div>
+            <div class="content">
+                <div class="good-job">
+                    <h1 id="modal-headline">Modal Headline</h1>
+                </div>
+                <div class="modal-paragraph">
+                    <p id="modal-paragraph">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, euismod nisl nisi euismod nisl.
+                        Donec euismod, nisl eget consectetur sagittis, nisl
+                        nisi consectetur nisl, eu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end modal -->
+    <section id="welcome">
+        <div class="home-container">
+            <h1 id="welcome-title">
+                Welcome to my Personal Design system
+            </h1>
+            <p>
+                The site contains a collection of styles and colors that can be used to create a personal design.
+            </p>
+        </div>
+    </section>
     <section>
         <div id="fonts">
             <h2 id="category-title">Fonts</h2>
@@ -248,7 +298,7 @@
                 and level up your border skills
             </p>
             <div id="border-examples">
-                <div class="border-example solid">
+                <div class="border-example solid" onclick="openModal('solid');">
                     <p class="label">
                         This is a solid border
                     </p>
