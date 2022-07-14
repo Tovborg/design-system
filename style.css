@@ -470,9 +470,18 @@ select {
 .border-example.dotted {
     border: 1px dotted #4CAF50;
 }
+.border-example.dotted:hover {
+    /* set the cursor to pointer */
+    cursor: pointer;
+}
 
 .border-example.dashed {
     border: 1px dashed #4CAF50;
+}
+
+.border-example.dashed:hover {
+    /* set the cursor to pointer */
+    cursor: pointer;
 }
 
 .border-example.gradient {
@@ -481,9 +490,18 @@ select {
     border-image-slice: 1;
 }
 
+.border-example.gradient:hover {
+    /* set the cursor to pointer */
+    cursor: pointer;
+}
+
 .border-example.rounded {
     border: 1px solid #4CAF50;
     border-radius: 50px;
+}
+.border-example.rounded:hover {
+    /* set the cursor to pointer */
+    cursor: pointer;
 }
 
 #welcome {
@@ -558,13 +576,13 @@ a.btn {
 }
 
 .modal {
-  width: 600px;
-  height: 400px;
+  width: 650px;
+  height: 600px;
+  position: absolute;
   display: block;
   margin: 50% 0 0 -300px;
-  position: relative;
-  top: 50%; 
-  left: 50%;
+  /* center the div vertically */
+  transform: translate(100%, 50%);
   background: #fff;
   opacity: 0;
   transition: all 0.5s ease-in-out;
@@ -576,7 +594,7 @@ a.btn {
 }
 
 .head { 
-  width: 90%;
+  width: 91%;
   height: 32px;
   padding: 12px 30px;
   overflow: hidden;
@@ -611,5 +629,5 @@ a.btn {
 
 .modal-paragraph {
     overflow: scroll;
-    height: 200px;
+    height: 400px;
 }

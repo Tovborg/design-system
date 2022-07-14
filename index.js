@@ -115,7 +115,34 @@ function openModal(el) {
         var headline = document.getElementById('modal-headline')
         headline.innerHTML = 'Solid Border';
         var paragraph = document.getElementById('modal-paragraph')
-        paragraph.innerHTML = 'A solid border is a border that is solid, not dashed or dotted. Solid borders are used for borders around elements, like the border around a box, or the border around a table cell. The solid border is made using either the shorthand border property or the border-style property. <br><br><code>border: solid 1px black;</code>';
+        paragraph.innerHTML = `A solid border is a border that is solid, not dashed or dotted. Solid borders are used for borders around elements, like the border around a box, or the border around a table cell. The solid border is made using either the shorthand border property or the border-style property. <br><br><code>border: solid 1px black;</code>
+        <br><br>The border-style property is used to set the style of the border. The border-style property can be used to set the style of the border to solid, dotted, dashed, double, groove, ridge, inset, or outset.
+        <br><br><code>border-style: solid;</code>`;
+    } else if (el === 'dashed') {
+        var headline = document.getElementById('modal-headline')
+        headline.innerHTML = 'Dashed Border';
+        var paragraph = document.getElementById('modal-paragraph')
+        paragraph.innerHTML = `A dashed border is a border that is dashed, not solid or dotted. Dashed borders are used for borders around elements, like the border around a box, or the border around a table cell. The dashed border is made using either the shorthand border property or the border-style property. <br><br><code>border: dashed 1px black;</code>`;
+    } else if (el === 'dotted') {
+        var headline = document.getElementById('modal-headline')
+        headline.innerHTML = 'Dotted Border';
+        var paragraph = document.getElementById('modal-paragraph')
+        paragraph.innerHTML = `A dotted border is a border that is dotted, not solid or dashed. Dotted borders are used for borders around elements, like the border around a box, or the border around a table cell. The dotted border is made using either the shorthand border property or the border-style property. <br><br><code>border: dotted 1px black;</code>
+        <br><br>The border-style property is used to set the style of the border. The border-style property can be used to set the style of the border to solid, dotted, dashed, double, groove, ridge, inset, or outset.
+        <br><br><code>border-style: dotted;</code>`;
+    } else if (el === 'rounded') {
+        var headline = document.getElementById('modal-headline')
+        headline.innerHTML = 'Rounded Border';
+        var paragraph = document.getElementById('modal-paragraph')
+        // set the paragraph.innerHTML to an explanation of how you make a solid rounded border using the border-radius property
+        paragraph.innerHTML = `A rounded border is not a border-style itself but is made using some of the other border-styles such as solid, dotted or dashed, and the border-radius property. <br><br><code>border: solid 1px black; <br>border-radius: 5px;</code>
+        <br><br>The border-radius property is used to make a rounded border. The border-radius property can be used to make a rounded border with a solid, dotted, dashed, double, groove, ridge, inset, or outset.`
+    } else if (el === 'gradient') {
+        var headline = document.getElementById('modal-headline')
+        headline.innerHTML = 'Gradient Border';
+        var paragraph = document.getElementById('modal-paragraph')
+        paragraph.innerHTML = `A gradient border is a border that is made using the border-image property. <br><br><code>border: 1px solid black; <br>border-image: linear-gradient(to right, red, blue);</code>`
+    
     }
     // add a class 'open' to the .modal-wrapper
     $('.modal-wrapper').toggleClass('open');
